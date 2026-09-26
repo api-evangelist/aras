@@ -1,23 +1,78 @@
 aid: aras
+
 name: Aras
-description: 'Aras is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Aras provides open and adaptable Product Lifecycle Management (PLM) and digital thread solutions. Their platform supports low‑code development, AI‑ready digital thread, and extensive integration capabilities for MCAD, ECAD, ERP, and more, serving industries such as aerospace, automotive, and medical devices. Aras Innovator is offered as a SaaS platform with subscription and upgrade options, and the company is recognized as a leader in the Gartner Magic Quadrant for PLM software.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aras/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
-- Company
-apis: []
+- Product Lifecycle Management
+- Digital Thread
+- Low-Code Development
+- PLM Software
+- Cloud Platform
+- AI-Ready
+- Industry Solutions
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/aras-llms.txt
+- type: Hosts
+  url: hosts/aras-hosts.yml
+- type: Vendors
+  url: vendors/aras-vendors.yml
+- type: TrustCenter
+  url: https://aras.com/en/trust-center
+- type: Support
+  url: https://community.aras.com/category/help-center
+- type: PrivacyPolicy
+  url: https://aras.com/en/privacy-policy
+- type: Newsroom
+  url: https://aras.com/en/news
+- type: GettingStarted
+  url: https://community.aras.com/category/engage/discussions/getting-started
+- type: Blog
+  url: https://aras.com/en/blog
+- type: Documentation
+  url: https://docs.aras.com/
+- type: DomainSecurity
+  url: security/aras-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/aras_stock/
+  url: https://aras.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation pages exist but no machine‑readable OpenAPI/AsyncAPI/GraphQL spec was found.
+  evidence:
+    - url: https://docs.aras.com/
+      status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
