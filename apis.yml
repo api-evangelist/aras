@@ -1,24 +1,16 @@
 aid: aras
-
 name: Aras
-
-description: 'Aras provides open and adaptable Product Lifecycle Management (PLM) and digital thread solutions. Their platform supports low‑code development, AI‑ready digital thread, and extensive integration capabilities for MCAD, ECAD, ERP, and more, serving industries such as aerospace, automotive, and medical devices. Aras Innovator is offered as a SaaS platform with subscription and upgrade options, and the company is recognized as a leader in the Gartner Magic Quadrant for PLM software.'
-
+description: Aras provides open and adaptable Product Lifecycle Management (PLM) and digital thread solutions. Their platform supports low‑code development, AI‑ready digital thread, and extensive integration
+  capabilities for MCAD, ECAD, ERP, and more, serving industries such as aerospace, automotive, and medical devices. Aras Innovator is offered as a SaaS platform with subscription and upgrade options, and
+  the company is recognized as a leader in the Gartner Magic Quadrant for PLM software.
 url: https://raw.githubusercontent.com/api-evangelist/aras/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:secondary-market
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
-
 specificationVersion: '0.20'
-
 created: '2026-09-25'
-
-modified: '2026-10-06'
-
+modified: '2026-10-20'
 tags:
 - PLM
 - Digital Thread
@@ -35,14 +27,14 @@ tags_raw:
 - Cloud Platform
 - AI-Ready
 - Industry Solutions
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
+- type: IntegrationEdges
+  url: integrations/aras-integration-edges.yml
 - url: https://aras.com/en/feed
   type: BlogRSS
 - type: LLMsTxt
@@ -69,20 +61,26 @@ common:
   url: security/aras-domain-security.yml
 - type: Website
   url: https://aras.com
-
+- type: TermsOfService
+  url: https://aras.com/en/website-terms-of-use
+- type: GitHubOrganization
+  url: https://github.com/ArasLabs
 apis: []
-
 x-coverage:
-  state: unreadable
-  reason: no-machine-readable-spec
-  detail: Documentation pages exist but no machine‑readable OpenAPI/AsyncAPI/GraphQL spec was found.
+  state: gated
+  reason: customer-only-docs
+  detail: docs.aras.com pages (Aras IOM SDK, OAuth Registry, Event Handling Framework) render only a Sign In shell for anonymous visitors and the docs MCP endpoint at docs.aras.com/mcp answers 401; no public
+    OpenAPI/OData contract was found on aras.com, docs.aras.com or the ArasLabs GitHub org.
   evidence:
-    - url: https://docs.aras.com/
-      status: 200
-  checked: 2026-09-25
+  - url: https://docs.aras.com/mcp
+    status: 401
+  - url: https://docs.aras.com/aras-iom-sdk-15.1.2
+    status: 200
+  - url: https://docs.aras.com/llms.txt
+    status: 404
+  checked: '2026-10-20'
 x-enrichment:
-  date: '2026-09-25'
-  status: enriched
-  artifacts_added: 7
-  pass: modular-v1
-  engine: identity=local,contract=local,surfaces=local,docs=local
+  date: '2026-10-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v5
